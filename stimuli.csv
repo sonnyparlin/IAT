@@ -1,0 +1,27 @@
+item,content,response
+1,I,Self
+2,Me,Self
+3,My,Self
+4,Mine,Self
+5,Self,Self
+6,Myself,Self
+7,They,Other
+8,Them,Other
+9,Their,Other
+10,It,Other
+11,Other,Other
+12,You,Other
+13,Computer Science,Science
+14,Physics,Science
+15,Chemistry,Science
+16,Math,Science
+17,Geology,Science
+18,Astronomy,Science
+19,Engineering,Science
+20,Creative Writing,Liberal Arts
+21,Humanities,Liberal Arts
+22,Art,Liberal Arts
+23,Literature,Liberal Arts
+24,English,Liberal Arts
+25,Music,Liberal Arts
+26,Poetry,Liberal Arts
