@@ -71,7 +71,7 @@ def block(anchors, responseMap, selection, trialName, trials=20):
         content = stimulus['content']
         rightAnswer = responseMap[stimulus['response']]
         curStim = visual.TextStim(win, text=content, height=0.1)
-        rightKeys = responseMap.values() + ['escape']
+        rightKeys = list(responseMap.values()) + ['escape']
         draw(curStim)
         timer.reset()
         userAnswer = event.waitKeys(keyList=rightKeys) or []

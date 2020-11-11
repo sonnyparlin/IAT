@@ -11,7 +11,7 @@ from psychopy import visual, event, core, gui
 def unicode_csv_reader(utf8_data, dialect=csv.excel, **kwargs):
     csv_reader = csv.reader(utf8_data, dialect=dialect, **kwargs)
     for row in csv_reader:
-        yield [unicode(cell, 'utf-8') for cell in row]
+        yield [ cell for cell in row]
 
 
 def getStimuli(path):
@@ -45,7 +45,7 @@ def saveData(path, trials):
     with open(path, 'w') as csvfile:
         file = csv.writer(csvfile)
         for trial in trials:
-            file.writerow([unicode(i).encode('utf-8') for i in trial])
+            file.writerow([str(i).encode('utf-8') for i in trial])
 
 
 def draw(win, stim, time=None):
@@ -69,8 +69,8 @@ def getResponseMappings(dimensions, keybindings=['e', 'i']):
     posNeg = {k: v for k, v in zip(dimensions[2:], keybindings)}
     otherSelf = invert(selfOther)
     negPos = invert(posNeg)
-    negopoself = dict(negPos.items() + otherSelf.items())
-    selfnegopo = dict(negPos.items() + selfOther.items())
+    negopoself = dict(negPos.items() | otherSelf.items())
+    selfnegopo = dict(negPos.items() | selfOther.items())
     return (selfOther, otherSelf, posNeg, negPos, negopoself, selfnegopo)
 
 
@@ -179,7 +179,7 @@ def runExperiment(pause, instructionOrder, blockOrder):
     is need, if there is not an instruction after each block.'''
     data = []
     trialCount = 0
-    mapping = itertools.izip_longest(instructionOrder, blockOrder)
+    mapping = itertools.zip_longest(instructionOrder, blockOrder)
 
     for instr, block in mapping:
         trialCount += 1
