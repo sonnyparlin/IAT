@@ -83,6 +83,7 @@ for filename in files:
     #1 congr then incong
     #2 incongr then congr
 
+    #line 103 is where the test flips
     if i < 103:
         congr_corr=corrs[0:block_length]
         congr_rts=rts[0:block_length]
