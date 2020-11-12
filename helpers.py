@@ -45,7 +45,8 @@ def saveData(path, trials):
     with open(path, 'w') as csvfile:
         file = csv.writer(csvfile)
         for trial in trials:
-            file.writerow([str(i).encode('utf-8') for i in trial])
+            #file.writerow([str(i).encode('utf-8') for i in trial])
+            file.writerow(trial)
 
 
 def draw(win, stim, time=None):
