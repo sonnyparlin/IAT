@@ -134,7 +134,7 @@ def main():
     experimentData.extend([info.values(), header])
     experimentData.extend(data)
     print(experimentData)
-    file = '{0}_{1}.csv'.format(info['Condition'], trialType)
+    file = 'expt/data/{0}_{1}.csv'.format(info['Condition'], trialType)
     help.saveData(file, experimentData)
 
     show(image=endInstruction)
