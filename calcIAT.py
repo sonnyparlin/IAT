@@ -79,9 +79,9 @@ for filename in files:
     corrs=df['corrAns'].dropna().tolist() #thpii changed variable names
     rts=df['RT'].dropna().tolist() #thpii changed variable names
     block_length=int(len(corrs)/2)
-    
-    #thpii there was no 'order' variable in this data so I commented out the order variable 
-    
+
+    #thpii there was no 'order' variable in this data so I commented out the order variable
+
     #find order
     #order=df['order'].tolist()[0]
     #1 congr then incong

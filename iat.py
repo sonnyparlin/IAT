@@ -133,7 +133,7 @@ def main():
     ## Save Data to CSV
     experimentData.extend([info.values(), header])
     experimentData.extend(data)
-    print(experimentData)
+    #print(experimentData)
     file = 'expt/data/{0}_{1}.csv'.format(info['Condition'], trialType)
     help.saveData(file, experimentData)
 
