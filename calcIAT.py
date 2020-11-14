@@ -7,7 +7,7 @@ TQS Feb 2014
 
 Based on
 
-Greenwald, A. G., Nosek, B. A., & Banaji, M. R. (2003). Understanding and using the implicit association test: I. An improved scoring algorithm. Journal of personality and social psychology, 85(2), 1972-216.
+Greenwald, A. G., Nosek, B. A., & Banaji, M. R. (2003). Understanding and using the implicit association test: I. An improved scoring  algorithm. Journal of personality and social psychology, 85(2), 1972-216.
 
 '''
 
@@ -16,7 +16,8 @@ import pandas as pd #for dealing with csv import
 import os # for joining paths and filenames sensibly
 import numpy as np #for the population std
 import glob # for finding csv data files
-import platform # paths use different dividers on linux vs windows, so we need to test for this
+import platform # paths use different dividers on linux vs windows,
+                # so we need to test for this
 from statistics import *
 
 ## -----------DEFINE FUNCTIONS

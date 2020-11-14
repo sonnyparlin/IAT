@@ -42,10 +42,8 @@ leftdown, rightdown = (-0.8, +0.7), (+0.8, +0.7)
 otherself = wrapdim({other: leftup, self: rightup})
 negpos = wrapdim({neg: leftup, pos: rightup})
 selfother = wrapdim({self: leftup, other: rightup})
-selfnegopo = wrapdim({self: leftup, neg: leftdown,
-                      other: rightup, pos: rightdown})
-negopoself = wrapdim({neg: leftup, other: leftdown,
-                      pos: rightup, self: rightdown})
+selfnegopo = wrapdim({self: leftup, neg: leftdown, other: rightup, pos: rightdown})
+negopoself = wrapdim({neg: leftup, other: leftdown, pos: rightup, self: rightdown})
 
 experimentData = []
 timer = core.Clock()
